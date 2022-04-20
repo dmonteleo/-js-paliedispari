@@ -48,8 +48,32 @@ function isPalindrome() {
   return palindromo;
 }
 
-isPalindrome();
-console.log(isPalindrome());
+// isPalindrome();
+// console.log(isPalindrome());
+
+function game() {
+  const user = prompt("pari o dispari?");
+  const userNumber = parseInt(prompt("inserisci un numero da uno a cinque"));
+  computerNumber = Math.floor(Math.random() * 5) + 1;
+  const sum = userNumber + computerNumber;
+  const check = sum % 2;
+  let vincitore;
+  if ((check === 0 && user === "pari") || (check=== 1 && user === "dispari")) {
+    vincitore = "user";
+  }
+  else {
+    vincitore = "computer"
+  }
+
+  console.log(vincitore);
+  console.log(userNumber);
+  console.log(computerNumber);
+  console.log(sum);
+
+  
+}
+
+game();
 
 
 
